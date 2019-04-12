@@ -1,5 +1,6 @@
 package lectureFirst;
 
+
 import org.testng.annotations.Test;
 
 public class LectureFirstTests {
@@ -74,4 +75,32 @@ public class LectureFirstTests {
         System.out.println(var1++);
         System.out.println(++var1);
     }
+
+    enum Gender {
+        MALE,
+        FEMALE
+    }
+
+    @Test
+    public void test6() {
+        String name;
+        String surname;
+        byte age;
+        Gender gender;
+        long egn;
+        int employeeNumber;
+
+        name = "Tonyo";
+        surname = "Zhelev";
+        age = 29;
+        gender = Gender.MALE;
+        egn = 9001001234L;
+        employeeNumber = 27560000;
+
+        System.out.println("Employee No:" + employeeNumber + " is "  + name + " " + surname + "\n" +
+                "aged " + age + ", Gender: " + gender + "\n" +
+                "EGN: " + egn);
+    }
+
+
 }
