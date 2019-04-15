@@ -1,6 +1,7 @@
 package lectureFirst;
 
 
+import Enums.Gender;
 import org.testng.annotations.Test;
 
 public class LectureFirstTests {
@@ -74,11 +75,6 @@ public class LectureFirstTests {
         //poziciqta na ++(--) operatora, opredelq prioriteta na izpylnenie, ako e pred promenlivata, pyrvo se izpulnqva toj, sled tova vs drugo, ako e sled - toj se izpylnqva posleden
         System.out.println(var1++);
         System.out.println(++var1);
-    }
-
-    enum Gender {
-        MALE,
-        FEMALE
     }
 
     @Test
