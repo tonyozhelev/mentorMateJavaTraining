@@ -4,6 +4,7 @@ import Enums.NumberNames;
 import functionality.Numbers;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.Random;
 
 public class LectureSecondTests {
@@ -35,7 +36,7 @@ public class LectureSecondTests {
     }
 
     @Test
-    public void lec2test2(){
+    public void lec2test2() {
         int a = rand.nextInt(9) + 1;
         int temp = a;
         if (a < 5) {
@@ -56,9 +57,29 @@ public class LectureSecondTests {
 
 
     @Test
-    public void lec2test3(){
+    public void lec2test3() {
         int a = rand.nextInt(10);
         System.out.println(a);
         System.out.println("The number picked is " + NumberNames.values()[a].toString().toLowerCase());
     }
+
+    @Test
+    public void lec2test4() {
+        //za po-golemi stoinosti stava mn bavno :)
+        int a = rand.nextInt(999999);
+        int b = rand.nextInt(999999);
+        if (a > b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        for (int i = a; i <= b; i++) {
+            if (Numbers.isPrime(i))
+            {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
 }
+
