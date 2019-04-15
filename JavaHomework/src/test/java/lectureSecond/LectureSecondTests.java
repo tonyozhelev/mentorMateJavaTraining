@@ -81,5 +81,18 @@ public class LectureSecondTests {
         }
         System.out.println();
     }
+
+    @Test
+    public void lec2test5() {
+        int a = rand.nextInt(10)+1;
+        for (int i = 1; i <= a; i++) {
+            for (int j = i; j < a+i; j++) {
+                System.out.print(String.format("%-3d",j));
+            }
+            System.out.println();
+        }
+    }
+
 }
+
 
