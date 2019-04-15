@@ -113,7 +113,19 @@ public class LectureSecondTests {
 
     @Test
     public void lec2test7() {
-        for (int i = 10; i < 33; i+=2){
+        for (int i = 10; i <= 33; i+=2){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    @Test
+    public void lec2test8() {
+        for (int i = 66; i >= 21; i-=4){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i = 77; i <= 99; i+=2){
             System.out.print(i + " ");
         }
         System.out.println();
