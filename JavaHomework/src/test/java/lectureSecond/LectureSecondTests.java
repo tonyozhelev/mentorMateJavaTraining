@@ -111,6 +111,13 @@ public class LectureSecondTests {
         System.out.println(secondMaxNum);
     }
 
+    @Test
+    public void lec2test7() {
+        for (int i = 10; i < 33; i+=2){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 }
 
 
