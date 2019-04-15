@@ -4,8 +4,8 @@ import Enums.NumberNames;
 import functionality.Numbers;
 import org.testng.annotations.Test;
 
-import java.util.List;
-import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class LectureSecondTests {
     private Random rand = new Random();
@@ -91,6 +91,24 @@ public class LectureSecondTests {
             }
             System.out.println();
         }
+    }
+
+    @Test
+    public void lec2test6() {
+        int[] numArr = new int[]{1,2,10,7,5,-6};
+        int maxNum = numArr[0];
+        for (int i = 1; i < numArr.length; i++){
+            if (maxNum < numArr[i]) {
+                maxNum = numArr[i];
+            }
+        }
+        int secondMaxNum = numArr[0];
+        for (int i = 1; i < numArr.length; i++){
+            if (secondMaxNum < numArr[i] && numArr[i] != maxNum) {
+                secondMaxNum = numArr[i];
+            }
+        }
+        System.out.println(secondMaxNum);
     }
 
 }
