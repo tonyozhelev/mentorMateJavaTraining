@@ -50,5 +50,11 @@ public class LectureThirdTests {
         System.out.println(StringFunctionality.reverseCase(stringToCheck));
     }
 
+    @Test
+    public void lec3test6(){
+        for (int i = 1; i<=100; i++){
+            System.out.println(String.format("your.name+%03d@mentormate.com",i));
+        }
 
+    }
 }
