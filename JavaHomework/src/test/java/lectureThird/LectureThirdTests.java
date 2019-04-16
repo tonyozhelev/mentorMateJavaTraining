@@ -1,14 +1,11 @@
 package lectureThird;
 
-import bsh.StringUtil;
 import functionality.StringFunctionality;
 import org.testng.annotations.Test;
-
-import java.sql.Struct;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class LectureThirdTests {
 
@@ -52,9 +49,15 @@ public class LectureThirdTests {
 
     @Test
     public void lec3test6(){
-        for (int i = 1; i<=100; i++){
+        for (int i = 1  ; i<=100; i++){
             System.out.println(String.format("your.name+%03d@mentormate.com",i));
         }
+    }
 
+    @Test
+    public void lec3test7(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMddHHmmss");
+        Calendar cal = Calendar.getInstance();
+        System.out.println(String.format("your.name+%s@mentormate.com",dateFormat.format(cal.getTime())));
     }
 }
