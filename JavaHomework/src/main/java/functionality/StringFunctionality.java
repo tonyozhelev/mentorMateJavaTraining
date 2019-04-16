@@ -35,12 +35,11 @@ public class StringFunctionality {
     }
 
     public static Map<Character, Integer> countASE(String stringToCheck){
-        Map<Character, Integer> countLetters = countLetters(stringToCheck).
+        return  countLetters(stringToCheck).
                 entrySet().
                 stream().
                 filter(x -> x.getKey() == 'a' || x.getKey() == 's' || x.getKey() == 'e').
                 collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
-        return countLetters;
     }
 
 
@@ -61,14 +60,13 @@ public class StringFunctionality {
         return reversed;
     }
 
-    public static Set<Character> getRepeatedLetters(String stringToCheck) {
-        Set<Character> repeatedLetters = countLetters(stringToCheck).
+    public static List<Character> getRepeatedLetters(String stringToCheck) {
+        return countLetters(stringToCheck).
                 entrySet().
                 stream().
                 filter(x -> x.getValue()>=2).
                 map(x->x.getKey()).
-                collect(Collectors.toSet());
-        return repeatedLetters;
+                collect(Collectors.toList());
     }
 
     public static Map<Character, Integer> countLetters(String stringToCheck) {
