@@ -4,6 +4,7 @@ import bsh.StringUtil;
 import functionality.StringFunctionality;
 import org.testng.annotations.Test;
 
+import java.sql.Struct;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,5 +38,9 @@ public class LectureThirdTests {
         System.out.println(StringFunctionality.countASE(stringToCheck));
     }
 
-
+    @Test
+    public void lec3test4(){
+        StringBuilder stringToReverse = new StringBuilder("Reverse this string.");
+        System.out.println(stringToReverse.reverse());
+    }
 }
