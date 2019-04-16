@@ -1,8 +1,6 @@
 package functionality;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class StringFunctionality {
 
@@ -64,5 +62,17 @@ public class StringFunctionality {
         }
 
         return reversed;
+    }
+
+    public static Set<Character> getRepeatedLetters(String stringToCheck) {
+        Set<Character> lettersInString = new HashSet<>();
+        Set<Character> repeatedLetters = new HashSet<>();
+        for (char letter: stringToCheck.toCharArray()){
+            if (lettersInString.contains(letter)){
+                repeatedLetters.add(letter);
+            }
+            lettersInString.add(letter);
+        }
+        return repeatedLetters;
     }
 }

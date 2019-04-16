@@ -56,8 +56,14 @@ public class LectureThirdTests {
 
     @Test
     public void lec3test7(){
-        DateFormat dateFormat = new SimpleDateFormat("yyyyMddHHmmss");
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
         Calendar cal = Calendar.getInstance();
         System.out.println(String.format("your.name+%s@mentormate.com",dateFormat.format(cal.getTime())));
+    }
+
+    @Test
+    public void lec3test8(){
+        String stringToCheck = "aaabbbccddeeeeefghi";
+        System.out.println(StringFunctionality.getRepeatedLetters(stringToCheck));
     }
 }
