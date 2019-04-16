@@ -37,5 +37,5 @@ public class LectureThirdTests {
         System.out.println(StringFunctionality.countASE(stringToCheck));
     }
 
-    
+
 }
