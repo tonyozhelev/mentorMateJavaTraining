@@ -1,9 +1,12 @@
 package lectureThird;
 
+import bsh.StringUtil;
 import functionality.StringFunctionality;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LectureThirdTests {
@@ -19,8 +22,7 @@ public class LectureThirdTests {
     }
 
     @Test
-    public void lec3test2()
-    {
+    public void lec3test2(){
         String stringToCount = "Random   .  gibberish text to use in web pages, site templates and in typography demos.";
         System.out.println(StringFunctionality.wordCount(stringToCount));
         //poredicata ot cifri syshto gi broi za edna duma
@@ -28,4 +30,12 @@ public class LectureThirdTests {
         System.out.println(StringFunctionality.wordCount(stringToCount));
 
     }
+
+    @Test
+    public void lec3test3(){
+        String stringToCheck = "aaaassssseeehjklhjuihuinjkljjnk";
+        System.out.println(StringFunctionality.countASE(stringToCheck));
+    }
+
+    
 }

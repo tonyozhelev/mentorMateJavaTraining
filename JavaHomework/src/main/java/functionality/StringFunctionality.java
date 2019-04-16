@@ -1,6 +1,8 @@
 package functionality;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StringFunctionality {
 
@@ -32,4 +34,19 @@ public class StringFunctionality {
                 .filter(x -> isWord(x))
                 .count();
     }
+
+    public static Map<Character, Integer> countASE(String stringToCheck){
+        Map<Character, Integer> countLetters = new HashMap<>();
+        countLetters.put('a',0);
+        countLetters.put('s',0);
+        countLetters.put('e',0);
+        for (char charToCheck:stringToCheck.toCharArray()) {
+            if (countLetters.containsKey(charToCheck)){
+                countLetters.put(charToCheck, countLetters.get(charToCheck)+1);
+            }
+        }
+        return countLetters;
+    }
+
+
 }
