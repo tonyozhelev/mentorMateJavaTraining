@@ -66,4 +66,10 @@ public class LectureThirdTests {
         String stringToCheck = "aaabbbccddeeeeefghi";
         System.out.println(StringFunctionality.getRepeatedLetters(stringToCheck));
     }
+
+    @Test
+    public void lec3test9(){
+        String stringToCheck = "our string %Welcome to mentorm@te1.com";
+        System.out.println(StringFunctionality.countLetters(stringToCheck));
+    }
 }

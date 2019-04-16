@@ -1,6 +1,7 @@
 package functionality;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class StringFunctionality {
 
@@ -34,15 +35,11 @@ public class StringFunctionality {
     }
 
     public static Map<Character, Integer> countASE(String stringToCheck){
-        Map<Character, Integer> countLetters = new HashMap<>();
-        countLetters.put('a',0);
-        countLetters.put('s',0);
-        countLetters.put('e',0);
-        for (char charToCheck:stringToCheck.toCharArray()) {
-            if (countLetters.containsKey(charToCheck)){
-                countLetters.put(charToCheck, countLetters.get(charToCheck)+1);
-            }
-        }
+        Map<Character, Integer> countLetters = countLetters(stringToCheck).
+                entrySet().
+                stream().
+                filter(x -> x.getKey() == 'a' || x.getKey() == 's' || x.getKey() == 'e').
+                collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
         return countLetters;
     }
 
@@ -65,14 +62,25 @@ public class StringFunctionality {
     }
 
     public static Set<Character> getRepeatedLetters(String stringToCheck) {
-        Set<Character> lettersInString = new HashSet<>();
-        Set<Character> repeatedLetters = new HashSet<>();
-        for (char letter: stringToCheck.toCharArray()){
-            if (lettersInString.contains(letter)){
-                repeatedLetters.add(letter);
-            }
-            lettersInString.add(letter);
-        }
+        Set<Character> repeatedLetters = countLetters(stringToCheck).
+                entrySet().
+                stream().
+                filter(x -> x.getValue()>=2).
+                map(x->x.getKey()).
+                collect(Collectors.toSet());
         return repeatedLetters;
+    }
+
+    public static Map<Character, Integer> countLetters(String stringToCheck) {
+        Map<Character, Integer> symbolCount = new HashMap<>();
+        for (char symbol: stringToCheck.toCharArray()){
+            if (symbolCount.containsKey(symbol)){
+                symbolCount.put(symbol, symbolCount.get(symbol)+1);
+            }
+            else{
+                symbolCount.put(symbol, 1);
+            }
+        }
+        return symbolCount;
     }
 }
