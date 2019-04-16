@@ -4,6 +4,7 @@
     <test name="test">
         <classes>
             <class name="lectureFirst.LectureFirstTests"/>
+            <class name="lectureSecond.LectureSecondTests"/>
         </classes>
     </test>
 </suite>
