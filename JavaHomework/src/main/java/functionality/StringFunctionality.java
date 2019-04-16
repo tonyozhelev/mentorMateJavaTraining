@@ -49,4 +49,20 @@ public class StringFunctionality {
     }
 
 
+    public static String reverseCase(String stringToCheck) {
+        String reversed = "";
+        for (char charToReverse: stringToCheck.toCharArray()) {
+            if (charToReverse >= 'a' && charToReverse <= 'z') {
+                reversed += Character.toUpperCase(charToReverse);
+            }
+            else if (charToReverse >= 'A' && charToReverse <= 'Z'){
+                reversed += Character.toLowerCase(charToReverse);
+            }
+            else{
+                reversed += charToReverse;
+            }
+        }
+
+        return reversed;
+    }
 }

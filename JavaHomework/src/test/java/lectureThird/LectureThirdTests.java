@@ -43,4 +43,12 @@ public class LectureThirdTests {
         StringBuilder stringToReverse = new StringBuilder("Reverse this string.");
         System.out.println(stringToReverse.reverse());
     }
+
+    @Test
+    public void lec3test5(){
+        String stringToCheck = "aAbBcCdD1234";
+        System.out.println(StringFunctionality.reverseCase(stringToCheck));
+    }
+
+
 }
