@@ -3,6 +3,7 @@ package lectureFourth;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class LectureFourthTests {
     @Test
@@ -21,4 +22,30 @@ public class LectureFourthTests {
         int sum = 0;
         System.out.println(Arrays.stream(arr).sum());
     }
+
+    @Test
+    public void lec4test3(){
+        int[][] arr = new int[3][];
+        int[] lengthForEachArr = new int[]{9,6,13};
+        for (int i = 0; i<arr.length; i++){
+            arr[i] = new int[lengthForEachArr[i]];
+            for (int j = 0; j<arr[i].length; j++){
+                arr[i][j] = j;
+            }
+        }
+        Arrays.stream(arr).forEach(x-> System.out.println(Arrays.toString(x)));
+        System.out.println("<--======================================================-->");
+        int[][] newArr = arr;
+        newArr[2] = null;
+        Arrays.stream(newArr).forEach(x-> System.out.println(Arrays.toString(x)));
+    }
+
+    @Test
+    public void lec4test4(){
+        String[] arr = new String[] {"This", "is", "how", "we", "roll", "arrays"};
+        List<String> arrToList = Arrays.asList(arr);
+        System.out.println(arrToList);
+    }
+
+
 }
