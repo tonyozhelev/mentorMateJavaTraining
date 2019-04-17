@@ -2,10 +2,7 @@ package lectureFourth;
 
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class LectureFourthTests {
     @Test
@@ -58,12 +55,23 @@ public class LectureFourthTests {
 
     @Test
     public void lec4test6(){
-        LinkedList<String> strList = new LinkedList<>(Arrays.asList("This", "is", "how", "we", "roll", "arrays"));
+        List<String> strList = new LinkedList<>(Arrays.asList("This", "is", "how", "we", "roll", "arrays"));
         ListIterator<String> iterator = strList.listIterator(strList.size());
         while (iterator.hasPrevious()){
             System.out.print(iterator.previous() + " ");
         }
     }
 
-
+    @Test
+    public void lec4test7(){
+        Map<Integer, String> strMap = new HashMap<>();
+        int keyIterator = 1;
+        for (String element : new String[]{"This", "is", "how", "we", "roll", "arrays"}){
+            strMap.put(keyIterator++, element);
+        }
+        System.out.println(strMap);
+        System.out.println("<--======================================================-->");
+        Map strMap2 = strMap;
+        System.out.println(strMap2);
+    }
 }
