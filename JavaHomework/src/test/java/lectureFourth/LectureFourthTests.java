@@ -60,6 +60,7 @@ public class LectureFourthTests {
         while (iterator.hasPrevious()){
             System.out.print(iterator.previous() + " ");
         }
+        System.out.println();
     }
 
     @Test
@@ -73,5 +74,21 @@ public class LectureFourthTests {
         System.out.println("<--======================================================-->");
         Map strMap2 = strMap;
         System.out.println(strMap2);
+    }
+
+    @Test
+    public void lec4test8(){
+        Map<Integer, String> strMap = new HashMap<>();
+        int keyIterator = 1;
+        for (String element : new String[]{"This", "is", "how", "we", "roll", "arrays"}){
+            strMap.put(keyIterator++, element);
+        }
+        String[] valuesToCheck = new String[]{"This", "That"};
+        for (String value :valuesToCheck){
+            if (!strMap.containsValue(value)){
+                strMap.put(keyIterator++,value);
+            }
+        }
+        System.out.println(strMap);
     }
 }
