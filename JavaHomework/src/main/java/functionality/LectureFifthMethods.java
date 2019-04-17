@@ -3,7 +3,7 @@ package functionality;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class LectureSixthMethods {
+public class LectureFifthMethods {
     public static int findMin(int a, int b, int c){
         return Math.min(Math.min(a,b),c);
     }
