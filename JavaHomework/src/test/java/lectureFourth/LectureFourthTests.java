@@ -3,7 +3,9 @@ package lectureFourth;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class LectureFourthTests {
     @Test
@@ -45,6 +47,22 @@ public class LectureFourthTests {
         String[] arr = new String[] {"This", "is", "how", "we", "roll", "arrays"};
         List<String> arrToList = Arrays.asList(arr);
         System.out.println(arrToList);
+    }
+
+    @Test
+    public void lec4test5(){
+        List<String> strList = Arrays.asList("This", "is", "how", "we", "roll", "arrays");
+        String[] listToArr = strList.toArray(new String[0]);
+        System.out.println(Arrays.toString(listToArr));
+    }
+
+    @Test
+    public void lec4test6(){
+        LinkedList<String> strList = new LinkedList<>(Arrays.asList("This", "is", "how", "we", "roll", "arrays"));
+        ListIterator<String> iterator = strList.listIterator(strList.size());
+        while (iterator.hasPrevious()){
+            System.out.print(iterator.previous() + " ");
+        }
     }
 
 
