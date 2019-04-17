@@ -1,6 +1,7 @@
 package functionality;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LectureSixthMethods {
@@ -17,5 +18,12 @@ public class LectureSixthMethods {
         return returnList;
     }
 
+    public List<String> stringToList(String string){
+        return Arrays.asList(string.split(" "));
+    }
+
+    public int stringListSize(List<String> listOfStrings){
+        return listOfStrings.size();
+    }
     
 }
