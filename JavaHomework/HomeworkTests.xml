@@ -6,6 +6,7 @@
             <class name="lectureFirst.LectureFirstTests"/>
             <class name="lectureSecond.LectureSecondTests"/>
             <class name="lectureFourth.LectureFourthTests"/>
+            <class name="lectureThird.LectureThirdTests"/>
         </classes>
     </test>
 </suite>
