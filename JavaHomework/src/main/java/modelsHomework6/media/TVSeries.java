@@ -1,6 +1,6 @@
-package modelsHomework6;
+package modelsHomework6.media;
 
-import modelsHomework6.Contracts.Media;
+import modelsHomework6.media.contracts.Media;
 
 import java.util.Arrays;
 import java.util.Map;
