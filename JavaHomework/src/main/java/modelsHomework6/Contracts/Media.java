@@ -9,7 +9,7 @@ public abstract class Media {
 
     public Media(Map<String,String> args) {
         setTitle(args.get("title"));
-        setRating(Double.parseDouble(args.get("rating")));
+        setRating(args.get("rating"));
         setGenre(args.get("genre"));
     }
 
@@ -25,8 +25,8 @@ public abstract class Media {
         return rating;
     }
 
-    private void setRating(double rating) {
-        this.rating = rating;
+    private void setRating(String rating) {
+        this.rating = Double.parseDouble(rating);
     }
 
     public String getGenre() {
