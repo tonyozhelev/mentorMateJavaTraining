@@ -1,7 +1,7 @@
-package modelsHomework6.searchEngines;
+package homework6.models.searchEngines;
 
-import modelsHomework6.media.contracts.Media;
-import modelsHomework6.searchEngines.contracts.ISearchEngine;
+import homework6.models.media.contracts.Media;
+import homework6.models.searchEngines.contracts.ISearchEngine;
 
 import java.util.List;
 import java.util.stream.Collectors;

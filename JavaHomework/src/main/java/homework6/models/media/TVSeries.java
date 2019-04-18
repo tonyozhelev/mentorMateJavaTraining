@@ -1,6 +1,6 @@
-package modelsHomework6.media;
+package homework6.models.media;
 
-import modelsHomework6.media.contracts.Media;
+import homework6.models.media.contracts.Media;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -12,7 +12,7 @@ public class TVSeries extends Media {
     private int numberOfSeasons;
     private Map<Integer, Double> seasonRating;
 
-    public TVSeries(Map<String, String> args) {
+    TVSeries(Map<String, String> args) {
         super(args);
         setSeasonTitles(args.get("Season titles"));
         setNumberOfEpisodes(args.get("Episodes Count"));

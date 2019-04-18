@@ -1,6 +1,6 @@
-package modelsHomework6.searchEngines.contracts;
+package homework6.models.searchEngines.contracts;
 
-import modelsHomework6.media.contracts.Media;
+import homework6.models.media.contracts.Media;
 
 import java.util.List;
 

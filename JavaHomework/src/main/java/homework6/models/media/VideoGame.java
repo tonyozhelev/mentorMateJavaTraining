@@ -1,6 +1,6 @@
-package modelsHomework6.media;
+package homework6.models.media;
 
-import modelsHomework6.media.contracts.Media;
+import homework6.models.media.contracts.Media;
 
 import java.util.Map;
 
@@ -8,7 +8,7 @@ public class VideoGame extends Media {
     private String supportedOS;
     private boolean isMultiplayer;
 
-    public VideoGame(Map<String, String> args) {
+    VideoGame(Map<String, String> args) {
         super(args);
         setSupportedOS(args.get("OS"));
         setMultiplayer(args.get("Multiplayer"));

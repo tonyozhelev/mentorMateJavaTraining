@@ -1,4 +1,4 @@
-package modelsHomework6.media.contracts;
+package homework6.models.media.contracts;
 
 import java.util.Map;
 

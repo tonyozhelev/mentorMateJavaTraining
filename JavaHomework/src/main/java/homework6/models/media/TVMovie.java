@@ -1,6 +1,6 @@
-package modelsHomework6.media;
+package homework6.models.media;
 
-import modelsHomework6.media.contracts.Media;
+import homework6.models.media.contracts.Media;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ public class TVMovie extends Media {
     private Duration duration;
     private List<String> listOfActors;
 
-    public TVMovie(Map<String,String> args) {
+    TVMovie(Map<String, String> args) {
         super(args);
         setDuration(args.get("duration"));
         setListOfActors(args.get("actors"));
@@ -22,7 +22,7 @@ public class TVMovie extends Media {
     }
 
     private void setDuration(String duration) {
-        this.duration = Duration.ofSeconds(calcDurationSeconds(duration));
+        this.duration = Duration.ofMinutes(Long.parseLong(duration));
     }
 
     public List<String> getListOfActors() {
@@ -36,10 +36,5 @@ public class TVMovie extends Media {
 
     public void addActor(String actorName){
         this.listOfActors.add(actorName);
-    }
-
-    private long calcDurationSeconds(String duration) {
-        List<Long> timeIntervals = Arrays.stream(duration.split(":")).map(Long::parseLong).collect(Collectors.toList());
-        return timeIntervals.get(0)*3600 + timeIntervals.get(1)*60 + timeIntervals.get(2);
     }
 }
