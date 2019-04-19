@@ -3,8 +3,6 @@ package lectureSecond;
 import Enums.NumberNames;
 import functionality.Numbers;
 import org.testng.annotations.Test;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class LectureSecondTests {
