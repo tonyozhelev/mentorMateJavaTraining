@@ -27,7 +27,7 @@ public class TVSeries extends Media {
     private void setSeasonTitles(String seasonTitles) {
         this.seasonTitles = Arrays.stream(seasonTitles.split(";")).
                 map(x->x.split(":",2)).
-                collect(Collectors.toMap(x->Integer.parseInt(x[0]),x->x[1]));
+                collect(Collectors.toMap(x->Integer.parseInt(x[0].trim()),x->x[1]));
     }
 
     public int getNumberOfEpisodes() {
@@ -53,6 +53,15 @@ public class TVSeries extends Media {
     private void setSeasonRating(String seasonRating) {
         this.seasonRating = Arrays.stream(seasonRating.split(";")).
                 map(x->x.split(":",2)).
-                collect(Collectors.toMap(x->Integer.parseInt(x[0]),x->Double.parseDouble(x[1])));
+                collect(Collectors.toMap(x->Integer.parseInt(x[0].trim()),x->Double.parseDouble(x[1])));
+    }
+
+
+    public String toString() {
+        return super.toString() +
+                "\nSeason titles: " + this.getSeasonTitles() +
+                "\nEpisodes Count: " + this.getNumberOfEpisodes() +
+                "\nSeason Count: " + this.getNumberOfSeasons() +
+                "\nSeason Rating: " + this.getSeasonRating();
     }
 }

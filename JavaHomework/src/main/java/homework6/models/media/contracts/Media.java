@@ -36,4 +36,11 @@ public abstract class Media {
     private void setGenre(String genre) {
         this.genre = genre;
     }
+
+    @Override
+    public String toString() {
+        return "\nTitle: " + this.getTitle() +
+        "\nRating: " + this.getRating() +
+        "\nGenre: " + this.getGenre();
+    }
 }

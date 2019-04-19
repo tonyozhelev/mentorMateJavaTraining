@@ -37,4 +37,11 @@ public class TVMovie extends Media {
     public void addActor(String actorName){
         this.listOfActors.add(actorName);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nDuration: " + this.getDuration() +
+                "\nActors: " + this.getListOfActors();
+    }
 }

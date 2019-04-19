@@ -9,7 +9,10 @@ import java.util.stream.Collectors;
 public class CategorySearchEngine extends SearchEngine implements ICategorySearchEngine {
     @Override
     public <T extends Media> List<Media> filterByMediaType(List<Media> media, Class<T> mediaType) {
-        return media.stream().filter(mediaType::isInstance).collect(Collectors.toList());
+        return media.
+                stream().
+                filter(mediaType::isInstance).
+                collect(Collectors.toList());
     }
 
     public <T extends Media> List<Media> searchByTitle(List<Media> media, String title, Class<T> mediaType) {

@@ -27,8 +27,14 @@ public class VideoGame extends Media {
     }
 
     private void setMultiplayer(String multiplayer) {
-        if (multiplayer.toLowerCase().equals("yes")){
+        if (multiplayer != null && multiplayer.toLowerCase().equals("yes")){
             this.isMultiplayer = true;
         }
+    }
+
+    public String toString() {
+        return super.toString() +
+                "\nOS: " + this.getSupportedOS() +
+                "\nMultiplayer: " + this.isMultiplayer();
     }
 }

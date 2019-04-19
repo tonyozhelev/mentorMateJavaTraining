@@ -10,14 +10,14 @@ public class SearchEngine implements ISearchEngine {
     @Override
     public List<Media> searchByTitle(List<Media> media, String title) {
         return media.stream().
-                filter(x->title.equals(x.getTitle())).
+                filter(x->x.getTitle().contains(title)).
                 collect(Collectors.toList());
     }
 
     @Override
     public List<Media> searchByGenre(List<Media> media, String genre) {
         return media.stream().
-                filter(x->genre.equals(x.getTitle())).
+                filter(x->x.getGenre().contains(genre)).
                 collect(Collectors.toList());
     }
 
