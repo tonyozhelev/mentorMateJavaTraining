@@ -8,6 +8,7 @@
             <class name="lectureThird.LectureThirdTests"/>
             <class name="lectureFourth.LectureFourthTests"/>
             <class name="lectureFifth.LectureFifthTests"/>
+            <class name="lectureSixth.LectureSixthTests"/>
         </classes>
     </test>
 </suite>
